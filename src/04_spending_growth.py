@@ -7,5 +7,6 @@ medicare["Tot_Spndng_2020"] = pd.to_numeric(medicare["Tot_Spndng_2020"])
 medicare["Tot_Spndng_2024"] = pd.to_numeric(medicare["Tot_Spndng_2024"])
 # medicare["spending_growth"] = ((medicare["Tot_Spndng_2024"] - medicare["Tot_Spndng_2020"]) / medicare["Tot_Spndng_2020"]) * 100
 medicare["spending_growth"] = (medicare["Tot_Spndng_2024"] - medicare["Tot_Spndng_2020"])
+medicare.to_csv("../data/raw/medicare_drug_spending.csv", index=False)
 print(medicare[["HCPCS_Cd", "Brnd_Name", "Tot_Spndng_2020", "Tot_Spndng_2024", "spending_growth"]].sort_values("spending_growth", ascending = False).head())
 # print(medicare[medicare["HCPCS_Cd"] == "90658"][["Brnd_Name", "Tot_Spndng_2020", "Tot_Spndng_2024", "spending_growth"]])
