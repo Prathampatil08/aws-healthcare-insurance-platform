@@ -28,4 +28,14 @@ medicare = pd.read_csv("../data/raw/medicare_drug_spending.csv")
 
 #print(medicare.head())
 
-print(medicare.info())
+#print(medicare.info())
+
+#nan_rows = medicare[medicare["spending_growth"].isna()]
+#print(nan_rows[["HCPCS_Cd", "Brnd_Name", "Tot_Spndng_2020", "Tot_Spndng_2024"]].head(10))
+
+medicare["is_new_drug"] = medicare["Tot_Spndng_2020"].isna()
+print(medicare["is_new_drug"].value_counts())
+
+
+
+
