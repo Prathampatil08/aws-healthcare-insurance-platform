@@ -59,7 +59,8 @@ aws-healthcare-insurance-platform/
 │   ├── 05_load_and_analyze.py    # Load from CSV
 │   ├── 07_upload_to_s3.py        # Upload Bronze layer to S3
 │   ├── 08_bronze_to_silver.py    # Clean and validate data
-│   └── 09_silver_to_gold.py      # Aggregate business metrics
+│   └── 09_upload_to_s3silver.py  # Upload silver layer to S3
+|   └── 10_silver_to_gold.py      # Aggregate business metrics
 ├── data/
 │   ├── raw/                      # Bronze layer (local)
 │   ├── processed/                # Silver layer (local)
